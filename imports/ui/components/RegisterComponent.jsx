@@ -4,7 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
 export default class RegistroComponent extends Component{
-	
+
 	addUser(event) {
 		event.preventDefault();
 		const tag = ReactDOM.findDOMNode(this.refs.tag).value;
@@ -24,13 +24,12 @@ export default class RegistroComponent extends Component{
 			username: tag,
 			password: password,
 			email: email,
-			profile:{
-				first_name: fname,
-				last_name: lname,
-				birthdate: birthdate,
-				gender: gender
-			}
+			first_name: fname,
+			last_name: lname,
+			birthdate: birthdate,
+			gender: gender,
 		};
+		
 		Accounts.createUser(accountInfo,function(er) {
 			if(er) {
 				Materialize.toast(er.reason, 4000);
@@ -54,19 +53,19 @@ export default class RegistroComponent extends Component{
 					<br />
 
 					<p className="right-align">
-						COMPITE en miles de torneos disponibles	
+						COMPITE en miles de torneos disponibles
 					</p>
 					<p className="right-align">
-						PLANEA tu avance hacia la gloria	
+						PLANEA tu avance hacia la gloria
 					</p>
 					<p className="right-align">
-						COOPERA coopera con la comunidad gamer local en un impacto positivo	
+						COOPERA coopera con la comunidad gamer local en un impacto positivo
 					</p>
 					<p className="right-align">
-						<strong>Gracias</strong>, <a href="/login">ya tengo una cuenta</a>	
+						<strong>Gracias</strong>, <a href="/login">ya tengo una cuenta</a>
 					</p>
 				</div>
-				
+
 
 				<div className="col s5">
 					<div className="row">
