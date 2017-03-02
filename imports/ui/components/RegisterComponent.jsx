@@ -29,13 +29,13 @@ export default class RegistroComponent extends Component{
 			birthdate: birthdate,
 			gender: gender,
 		};
-		
+
 		Accounts.createUser(accountInfo,function(er) {
 			if(er) {
 				Materialize.toast(er.reason, 4000);
 			} else {
 				//Redirect
-				FlowRouter.go('/welcome');
+				FlowRouter.go('/home');
 			}
 		});
 	}
