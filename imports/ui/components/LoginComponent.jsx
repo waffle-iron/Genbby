@@ -24,9 +24,7 @@ export default class LoginComponent extends Component{
 		return (
 			<div className="row">
 				<div className="col s12 m8 offset-m2 l4 offset-l4">
-					<div className="">
-						<h4 className="center-align">Welcome</h4>
-					</div>
+					<h3 className="center-align">Welcome</h3>
 					<form onSubmit={this.onLogin.bind(this)} className="col offset-s1 s10">
 						<div className="row">
 							<div className="input-field">
@@ -56,7 +54,7 @@ export default class LoginComponent extends Component{
 						</div>
 						<div className="row">
 							<div className="col offset-s6 s6">
-								<a href="">forgot your password?</a>
+								<a href="/recover">forgot your password?</a>
 							</div>
 						</div>
 						<div className="row">

@@ -5,6 +5,8 @@ import { MainLayout } from './layouts/MainLayout.jsx';
 import  HomeLayout  from './layouts/HomeLayout.jsx';
 import LoginComponent from './components/LoginComponent.jsx';
 import RegisterComponent from './components/RegisterComponent.jsx';
+import RecoverPasswordComponent from './components/RecoverPasswordComponent.jsx';
+import ChangePasswordComponent from './components/ChangePasswordComponent.jsx';
 
 FlowRouter.route('/', {
 	action() {
@@ -26,6 +28,22 @@ FlowRouter.route('/home', {
 	action() {
 		mount(MainLayout, {
 			content: (<HomeLayout />)
+		});
+	}
+});
+
+FlowRouter.route('/recover', {
+	action() {
+		mount(MainLayout, {
+			content: (<RecoverPasswordComponent />)
+		});
+	}
+});
+
+FlowRouter.route('/change',{
+	action(){
+		mount(MainLayout,{
+			content: (<ChangePasswordComponent />)
 		});
 	}
 });
