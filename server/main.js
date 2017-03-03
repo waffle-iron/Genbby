@@ -24,7 +24,9 @@ Meteor.startup(() => {
     return user;
   });
 
-
+  Accounts.urls.resetPassword = function(token) {
+    return Meteor.absoluteUrl('reset-password/' + token);
+  };
 
   process.env.MAIL_URL = "smtp://genbbybot123%40gmail.com:gennbybot123@smtp.gmail.com:465/";
 });

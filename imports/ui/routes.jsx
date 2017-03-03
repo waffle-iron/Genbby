@@ -7,6 +7,7 @@ import LoginComponent from './components/LoginComponent.jsx';
 import RegisterComponent from './components/RegisterComponent.jsx';
 import RecoverPasswordComponent from './components/RecoverPasswordComponent.jsx';
 import ChangePasswordComponent from './components/ChangePasswordComponent.jsx';
+import ResetPasswordComponent from './components/ResetPasswordComponent.jsx';
 
 FlowRouter.route('/', {
 	action() {
@@ -40,10 +41,18 @@ FlowRouter.route('/recover', {
 	}
 });
 
-FlowRouter.route('/change',{
+FlowRouter.route('/change/',{
 	action(){
 		mount(MainLayout,{
 			content: (<ChangePasswordComponent />)
+		});
+	}
+});
+
+FlowRouter.route('/reset-password/:token',{
+	action(params){
+		mount(MainLayout,{
+			content: (<ResetPasswordComponent token={params.token}/>)
 		});
 	}
 });

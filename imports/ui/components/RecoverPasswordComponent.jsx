@@ -7,8 +7,8 @@ export default class RecoverPasswordComponent extends Component{
 	onRecover(error) {
 		error.preventDefault();
 		const email = ReactDOM.findDOMNode(this.refs.email).value;
-		
-		Accounts.forgotPassword(email, function(err){
+
+		Accounts.forgotPassword({email:email}, function(err){
 			if(err){
 				console.log(err);
 			}else{
@@ -33,6 +33,6 @@ export default class RecoverPasswordComponent extends Component{
 					</form>
 				</div>
 			</div>
-		);	
+		);
 	}
 }
