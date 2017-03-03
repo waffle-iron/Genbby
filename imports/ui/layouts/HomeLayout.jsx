@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export const HomeLayout = () => (
-	<div>
-		<h1>Bienvenido</h1>
-	</div>
-)
+export default class HomeLayout extends Component{
+	render(){
+		return (
+			<div>
+				<h1>Bienvenido</h1>
+			</div>
+		);}
+}

@@ -16,8 +16,6 @@ export default class RegistroComponent extends Component{
 
 		const male = ReactDOM.findDOMNode(this.refs.male).checked;
 		const female = ReactDOM.findDOMNode(this.refs.female).checked;
-		console.log(male);
-		console.log(female);
 		const gender = male?"male":(female?"female":"not specified");
 
 		const accountInfo = {
