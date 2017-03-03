@@ -15,7 +15,7 @@ export default class LoginComponent extends Component{
 			if(er) {
 				Materialize.toast(er.reason, 4000);
 			} else {
-				FlowRouter.go('/welcome');
+				FlowRouter.go('/home');
 			}
 		});
 	}

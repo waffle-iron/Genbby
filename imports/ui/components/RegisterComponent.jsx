@@ -16,8 +16,6 @@ export default class RegistroComponent extends Component{
 
 		const male = ReactDOM.findDOMNode(this.refs.male).checked;
 		const female = ReactDOM.findDOMNode(this.refs.female).checked;
-		console.log(male);
-		console.log(female);
 		const gender = male?"male":(female?"female":"not specified");
 
 		const accountInfo = {
@@ -35,7 +33,7 @@ export default class RegistroComponent extends Component{
 				Materialize.toast(er.reason, 4000);
 			} else {
 				//Redirect
-				FlowRouter.go('/welcome');
+				FlowRouter.go('/home');
 			}
 		});
 	}
