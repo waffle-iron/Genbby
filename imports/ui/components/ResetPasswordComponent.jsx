@@ -11,7 +11,7 @@ export default class ResetPasswordComponent extends Component{
 
 		if(newPassword === newPasswordConfirm)	{
       Accounts.resetPassword(this.props.token, newPassword, (error) => {
-        if(!error)
+        if(error)
           Materialize.toast(er.reason, 4000);
         else
           FlowRouter.go('/home');

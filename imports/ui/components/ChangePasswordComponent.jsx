@@ -10,8 +10,8 @@ export default class ChangePasswordComponent extends Component{
 		const newPassword = ReactDOM.findDOMNode(this.refs.newpassword).value.trim();
 		const newPasswordConfirm = ReactDOM.findDOMNode(this.refs.newpasswordconfirm).value.trim();
 		if(newPassword==newPasswordConfirm)	{
-			Accounts.changePassword( oldPassword , newPassword, (error)=>{ 
-				if(!error)
+			Accounts.changePassword( oldPassword , newPassword, (error)=>{
+				if(error)
 					Materialize.toast(er.reason, 4000);
 				else
 					FlowRouter.go('/home');
