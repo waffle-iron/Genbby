@@ -20,3 +20,8 @@ shell-server@0.2.2            # Server-side component of the `meteor shell` comm
 
 scholtzm:accounts-steam
 accounts-password
+
+meteortoys:allthings
+kadira:flow-router
+accounts-ui
+materialize:materialize
